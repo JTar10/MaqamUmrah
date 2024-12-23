@@ -5,6 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import PackagesPage from "./pages/PackagesPage";
 import AboutUs from "./pages/AboutUs";
 import Reviews from "./pages/Reviews";
+import FAQs from "./pages/Faqs";
 import ContactUs from "./pages/ContactUs";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/faqs" element={<FAQs />} />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </div>

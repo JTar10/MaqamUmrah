@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.jpg"; // Adjust path if needed
 
 const LandingPage = () => {
   const images = [
@@ -9,44 +11,80 @@ const LandingPage = () => {
   ];
 
   const [visibleImages, setVisibleImages] = useState(Array(images.length).fill(false));
+  const [showContent, setShowContent] = useState(false); // For logo and button
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timeouts = [];
-  
+
+    // Animate images one by one
     images.forEach((_, index) => {
       timeouts.push(
         setTimeout(() => {
-          console.log(`Animating image at index ${index}`);
           setVisibleImages((prev) => {
             const updated = [...prev];
             updated[index] = true;
             return updated;
           });
-        }, index * 1000) // Each image fades in one after the other
+        }, index * 750) // Each image fades in one after the other
       );
     });
-  
+
+    // Show content slightly earlier after the last image fades in
+    const totalAnimationTime = images.length * 800; // Adjusted for earlier appearance
+    timeouts.push(
+      setTimeout(() => {
+        setShowContent(true);
+      }, totalAnimationTime)
+    );
+
     // Cleanup on unmount
     return () => {
-      console.log("Cleaning up timeouts");
       timeouts.forEach((timeout) => clearTimeout(timeout));
     };
-  }, []); // Change dependency array to [] to run only once
-  
+  }, []);
+
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen grid grid-rows-2 grid-cols-2">
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 w-full h-full bg-cover bg-center transition-all duration-1000 ${
+          className={`w-full h-full bg-cover bg-center transition-all duration-1000 ${
             visibleImages[index] ? "animate-fadeAndMove" : "opacity-0"
           }`}
           style={{ backgroundImage: `url(${image})` }}
         ></div>
       ))}
+
+      {/* Centered logo and content */}
+      {showContent && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+          <div
+            className="animate-fadeAndGrow flex flex-col items-center"
+            style={{
+              animationDuration: "1s",
+            }}
+          >
+            {/* Circular Logo */}
+            <img
+              src={logo}
+              alt="Maqam Umrah Logo"
+              className="w-32 h-32 rounded-full mb-6"
+            />
+            <p className="text-black text-lg text-center mb-6 bg-gold rounded-lg px-2 py-1">
+              Your Trusted Umrah Travel Partner
+            </p>
+            <button
+              className="bg-gold text-black px-6 py-3 rounded-lg text-lg font-semibold hover:bg-white transition duration-300"
+              onClick={() => navigate("/packages")} // Navigate to packages page
+            >
+              Explore Packages
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default LandingPage;
-

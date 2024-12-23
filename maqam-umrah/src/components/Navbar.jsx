@@ -47,6 +47,14 @@ const Navbar = () => {
           </li>
           <li>
             <Link
+              to="/faqs"
+              className="hover:text-blue-900 transition duration-200"
+            >
+              FAQs
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/contact"
               className="hover:text-blue-900 transition duration-200"
             >

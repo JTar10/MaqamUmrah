@@ -1,6 +1,6 @@
 import React from "react";
 
-const AboutUs = () => {
+const Reviews = () => {
   return (
     <div className="bg-gray-100 min-h-screen p-8">
       <h1 className="text-3xl font-semibold text-gray-800">About Us</h1>
@@ -12,4 +12,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Reviews;
