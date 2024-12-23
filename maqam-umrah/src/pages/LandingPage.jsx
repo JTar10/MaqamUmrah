@@ -75,7 +75,7 @@ const LandingPage = () => {
               Your Trusted Umrah Travel Partner
             </p>
             <button
-              className="bg-gold text-black px-6 py-3 rounded-lg text-lg font-semibold hover:bg-white transition duration-300"
+              className="bg-gold text-black px-6 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:border hover:border-black transition duration-300"
               onClick={() => navigate("/packages")} // Navigate to packages page
             >
               Explore Packages
