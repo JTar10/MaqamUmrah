@@ -41,7 +41,7 @@ const Faqs = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-center text-3xl font-bold mb-6">Frequently Asked Questions</h1>
+      <h1 className="pt-4 text-3xl font-bold mb-6">Frequently Asked Questions</h1>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div
