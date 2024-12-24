@@ -34,7 +34,7 @@ const Navbar = () => {
           <li className="mb-2 lg:mb-0">
             <Link
               to="/"
-              className="p-2 hover:bg-blue-900 hover:bg-opacity-70 hover:text-white rounded transition duration-200"
+              className="p-2 hover:bg-white rounded transition duration-200"
             >
               Home
             </Link>
@@ -42,7 +42,7 @@ const Navbar = () => {
           <li className="mb-2 lg:mb-0">
             <Link
               to="/packages"
-              className="p-2 hover:bg-blue-900 hover:bg-opacity-70 hover:text-white rounded transition duration-200"
+              className="p-2 hover:bg-white rounded transition duration-200"
             >
               Packages
             </Link>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <li className="mb-2 lg:mb-0">
             <Link
               to="/reviews"
-              className="p-2 hover:bg-blue-900 hover:bg-opacity-70 hover:text-white rounded transition duration-200"
+              className="p-2 hover:bg-white rounded transition duration-200"
             >
               Reviews
             </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
           <li className="mb-2 lg:mb-0">
             <Link
               to="/about"
-              className="p-2 hover:bg-blue-900 hover:bg-opacity-70 hover:text-white rounded transition duration-200"
+              className="p-2 hover:bg-white rounded transition duration-200"
             >
               About Us
             </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
           <li className="mb-2 lg:mb-0">
             <Link
               to="/faqs"
-              className="p-2 hover:bg-blue-900 hover:bg-opacity-70 hover:text-white rounded transition duration-200"
+              className="p-2 hover:bg-white rounded transition duration-200"
             >
               FAQs
             </Link>
@@ -74,7 +74,7 @@ const Navbar = () => {
           <li className="mb-2 lg:mb-0">
             <Link
               to="/contact"
-              className="p-2 hover:bg-blue-900 hover:bg-opacity-70 hover:text-white rounded transition duration-200"
+              className="p-2 hover:bg-white rounded transition duration-200"
             >
               Contact Us
             </Link>

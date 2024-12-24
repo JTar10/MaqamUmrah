@@ -4,17 +4,17 @@ const AboutUs = () => {
   const team = [
     {
       name: "Sh. Abdirahman",
-      profile: "Currently residing in Ottawa, shaykh Abdirahman is not only the co-founder of Maqam Umrah, but he is also one of the imams at the Ottawa Mosque. He obtained his undergraduate degree in the faculty of shariah at the Islamic university of Medina and has a total of 4 hajj trips and many more umrah trips.",
+      profile: "Currently residing in Ottawa, shaykh Abdirahman is not only the co-founder of Maqam Umrah, but he is also one of the imams at the Ottawa Mosque. He obtained his undergraduate degree in the faculty of shariah at the Islamic university of Medina and has led a total of 4 hajj trips and many more umrah trips.",
       image: "/images/shaykh.png",
     },
     {
       name: "Br. Siad",
-      profile: "Whenever I visit Medina, there is this one Mandi spot I really need to eat at twice before I am satisfied. You will only know the secret Mandi spot after you register for umrah with us! btw I also co-found Maqam Umrah.",
+      profile: "Whenever I visit Medina, there is this one Mandi spot I need to eat at twice before I am satisfied. You will only know the secret mandi spot after you register for umrah with us! btw I also co-found Maqam Umrah.",
       image: "/images/siad.png",
     },
     {
       name: "Sr. Mariam",
-      profile: "I am an Ottawa resident and a member of the Maqam Umrah Team! I'm happy to serve on this umrah team and help out wherever necessary!",
+      profile: "I am an Ottawa resident and a member of the Maqam Umrah Team! I'm happy to serve on this umrah team and help out!",
       image: "/images/mariam.png",
     },
   ];
@@ -62,7 +62,8 @@ const AboutUs = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-48 h-48 border-4 border-gold object-cover"
+                className="w-48 h-48 object-cover"
+                style={{ borderColor: '#D4AF37', borderWidth: '6px', borderStyle: 'solid' }}
               />
             </div>
 
