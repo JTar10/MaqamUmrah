@@ -34,10 +34,10 @@ const ContactUs = () => {
             </p>
             <ul className="space-y-2">
               <li>
-                <strong>Phone:</strong> +1 (613) 123-4567
+                <strong>Phone:</strong> +1 (613) 981-4388
               </li>
               <li>
-                <strong>Email:</strong> maqamumrah@gmail.com
+                <strong>Email:</strong> maqamservices@gmail.com
               </li>
               <li>
                 <strong>Office Address:</strong> 2378 Holly Lane Unit 202

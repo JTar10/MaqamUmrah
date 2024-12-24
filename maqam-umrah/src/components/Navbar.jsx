@@ -19,7 +19,7 @@ const Navbar = () => {
             href="https://www.instagram.com/maqamumrah/"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4"
+            className="ml-4 hover:bg-white rounded transition duration-300 p-2"
           >
             <img
               src={instagram}

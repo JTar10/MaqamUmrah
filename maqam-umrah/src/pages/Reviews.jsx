@@ -1,15 +1,69 @@
-import React from "react";
+// ReviewsPage.jsx
+import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 
-const Reviews = () => {
+const reviewsData = [
+  { name: "Rashid A.", rating: 4.5, text: "Amazing service and attention to detail!" },
+  { name: "Muhammad S.", rating: 5, text: "Truly a memorable experience, highly recommend!" },
+  { name: "Sister 1.", rating: 4, text: "Great organization and smooth trip arrangements." },
+  { name: "Maaz G.", rating: 4.5, text: "Professional team, everything went perfectly." },
+  { name: "Sister 2.", rating: 5, text: "Exceeded my expectations, thank you so much!" },
+  { name: "Sister 3.", rating: 3.5, text: "Good overall, but some minor delays." },
+  { name: "Tarek J.", rating: 4, text: "Wonderful journey, would book again!" },
+  { name: "Aiden K.", rating: 5, text: "Top-notch service from start to finish!" },
+];
+
+const Review = ({ name, rating, text }) => {
+  // Calculate full and half stars
+  const fullStars = Math.floor(rating);
+  const halfStars = rating % 1 >= 0.5 ? 1 : 0;
+
   return (
-    <div className="bg-gray-100 min-h-screen p-8">
-      <h1 className="text-3xl font-semibold text-gray-800">About Us</h1>
-      <p className="text-gray-600 mt-4">
-        Learn more about Maqam Umrah and our commitment to providing
-        exceptional service for your spiritual journey.
-      </p>
+    <div className="bg-white rounded-lg shadow-md p-4 mb-4">
+      <h3 className="text-lg font-bold mb-2 text-center">{name}</h3>
+      <div className="flex justify-center items-center mb-2">
+        {/* Full stars */}
+        {Array.from({ length: fullStars }, (_, i) => (
+          <FontAwesomeIcon key={`full-${i}`} icon={faStar} className="text-yellow-500 mr-1" />
+        ))}
+        {/* Half stars */}
+        {halfStars === 1 && (
+          <FontAwesomeIcon icon={faStarHalfAlt} className="text-yellow-500 mr-1" />
+        )}
+      </div>
+      <p className="text-gray-700 text-center">{text}</p>
+    </div>
+  );  
+};
+
+const ReviewsPage = () => {
+  const [visiblePairs, setVisiblePairs] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisiblePairs((prev) => (prev < reviewsData.length / 2 ? prev + 1 : prev));
+    }, 500); // Fade in new pairs every second
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-8 text-center">Customer Reviews</h1>
+      {Array.from({ length: Math.ceil(reviewsData.length / 2) }, (_, pairIndex) => (
+        <div
+          key={pairIndex}
+          className={`grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 transition-all duration-700 ${
+            pairIndex < visiblePairs ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+          }`}
+        >
+          {/* Render the two reviews in this pair */}
+          <Review {...reviewsData[pairIndex * 2]} />
+          {reviewsData[pairIndex * 2 + 1] && <Review {...reviewsData[pairIndex * 2 + 1]} />}
+        </div>
+      ))}
     </div>
   );
 };
 
-export default Reviews;
+export default ReviewsPage;
