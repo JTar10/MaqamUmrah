@@ -45,7 +45,7 @@ const ReviewsPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setVisiblePairs((prev) => (prev < reviewsData.length / 2 ? prev + 1 : prev));
-    }, 500); // Fade in new pairs every second
+    }, 250);
     return () => clearInterval(interval);
   }, []);
 
