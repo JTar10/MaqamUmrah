@@ -15,7 +15,7 @@ const ContactUs = () => {
     <div className="container mx-auto p-4">
       {/* Page Header */}
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold">Contact Us</h1>
+        <h1 className="pt-4 text-3xl font-bold">Contact Us</h1>
       </div>
 
       {/* Main Content */}

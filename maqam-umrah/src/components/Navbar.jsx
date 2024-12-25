@@ -5,7 +5,7 @@ import instagram from "../assets/instagram.png";
 
 const Navbar = () => {
   return (
-    <nav className="bg-gold text-black p-4">
+    <nav className="bg-gold text-black p-4 ">
       <div className="container mx-auto flex flex-wrap items-center">
         {/* Logo Section */}
         <div className="flex-shrink-0 flex items-center mr-4">
@@ -19,7 +19,7 @@ const Navbar = () => {
             href="https://www.instagram.com/maqamumrah/"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 hover:bg-white rounded transition duration-300 p-2"
+            className="ml-4 hover:bg-white rounded-xl transition duration-200 p-2"
           >
             <img
               src={instagram}
@@ -45,6 +45,14 @@ const Navbar = () => {
               className="p-2 hover:bg-white rounded transition duration-200"
             >
               Packages
+            </Link>
+          </li>
+          <li className="mb-2 lg:mb-0">
+            <Link
+              to="/gallery"
+              className="p-2 hover:bg-white rounded transition duration-200"
+            >
+              Gallery
             </Link>
           </li>
           <li className="mb-2 lg:mb-0">

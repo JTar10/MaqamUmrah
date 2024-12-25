@@ -7,11 +7,13 @@ const reviewsData = [
   { name: "Rashid A.", rating: 4.5, text: "Amazing service and attention to detail!" },
   { name: "Muhammad S.", rating: 5, text: "Truly a memorable experience, highly recommend!" },
   { name: "Sister 1.", rating: 4, text: "Great organization and smooth trip arrangements." },
-  { name: "Maaz G.", rating: 4.5, text: "Professional team, everything went perfectly." },
+  { name: "Aiden K.", rating: 5, text: "Top-notch service from start to finish!" },
   { name: "Sister 2.", rating: 5, text: "Exceeded my expectations, thank you so much!" },
   { name: "Sister 3.", rating: 3.5, text: "Good overall, but some minor delays." },
   { name: "Tarek J.", rating: 4, text: "Wonderful journey, would book again!" },
-  { name: "Aiden K.", rating: 5, text: "Top-notch service from start to finish!" },
+  { name: "Sister 4.", rating: 5, text: "Exceeded my expectations, thank you so much!" },
+  { name: "Maaz G.", rating: 4.5, text: "Professional team, everything went perfectly." },
+  { name: "Sister 5.", rating: 3.5, text: "Good overall, but some minor delays." },
 ];
 
 const Review = ({ name, rating, text }) => {
@@ -49,7 +51,7 @@ const ReviewsPage = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-8 text-center">Customer Reviews</h1>
+      <h1 className="pt-4 text-3xl font-bold mb-8 text-center">Customer Reviews</h1>
       {Array.from({ length: Math.ceil(reviewsData.length / 2) }, (_, pairIndex) => (
         <div
           key={pairIndex}

@@ -54,9 +54,9 @@ const PackageCard = ({ title, image, details, registrationLink, animationDelay }
   </div>
 );
 
-const PackagesPage = () => (
+const Packages = () => (
   <div className="container mx-auto p-4">
-    <h1 className="text-3xl font-bold mb-8 text-center">Our Packages</h1>
+    <h1 className="pt-4 text-3xl font-bold mb-8 text-center">Our Packages</h1>
     <div className="space-y-8">
       {packages.map((pkg, index) => (
         <PackageCard
@@ -69,4 +69,4 @@ const PackagesPage = () => (
   </div>
 );
 
-export default PackagesPage;
+export default Packages;
