@@ -45,11 +45,14 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen grid grid-rows-2 grid-cols-2">
+    <div
+      className="relative grid grid-rows-2 grid-cols-2 gap-0 h-[calc(100vh-100px)]" // Adjust for navbar height
+      style={{ height: "calc(100vh - 100px)", overflowY: "hidden", }} // Matches Tailwind class for fallback
+    >
       {images.map((image, index) => (
         <div
           key={index}
-          className={`w-full h-full bg-cover bg-center transition-all duration-1000 ${
+          className={`relative w-full h-full bg-cover bg-center transition-all duration-1000 ${
             visibleImages[index] ? "animate-fadeAndMove" : "opacity-0"
           }`}
           style={{ backgroundImage: `url(${image})` }}
