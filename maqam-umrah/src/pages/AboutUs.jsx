@@ -4,17 +4,17 @@ const AboutUs = () => {
   const team = [
     {
       name: "Sh. Abdirahman",
-      profile: "Currently residing in Ottawa, shaykh Abdirahman is not only the co-founder of Maqam Umrah, but he is also one of the imams at the Ottawa Mosque. He obtained his undergraduate degree in the faculty of shariah at the Islamic university of Medina and has led a total of 4 hajj trips and many more umrah trips.",
+      profile: "Currently residing in Ottawa, shaykh Abdirahman is one of the co-founders of Maqam Umrah and one of the imams at the Ottawa Mosque. He obtained his undergraduate degree in the faculty of shariah at the Islamic university of Medina and has led a total of 4 hajj trips and many more umrah trips.",
       image: "/images/shaykh.png",
     },
     {
       name: "Br. Siad",
-      profile: "Whenever I visit Medina, there is this one Mandi spot I need to eat at twice before I am satisfied. You will only know the secret mandi spot after you register for umrah with us! btw I also co-found Maqam Umrah.",
+      profile: "Whenever I visit Medina, there is this one mandi spot I need to eat at twice before I am satisfied. You will only know the secret mandi spot after you register for umrah with us! btw I also co-found Maqam Umrah.",
       image: "/images/siad.png",
     },
     {
       name: "Sr. Mariam",
-      profile: "I am an Ottawa resident and a member of the Maqam Umrah Team! I'm happy to serve on this umrah team and help out!",
+      profile: "I am an Ottawa resident and a member of the Maqam Umrah team! I'm happy to serve on this umrah team and help out!",
       image: "/images/mariam.png",
     },
   ];
