@@ -1,1 +1,1 @@
-Website for Maqam Umrah
+This web application is a concept (not real and not currently being used as a company website for any company) to showcase a local company that specializes in travel services for Islamic pilgrimage purposes.
