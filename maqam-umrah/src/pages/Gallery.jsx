@@ -27,7 +27,6 @@ const trips = [
       "/images/oct2024/8.jpg",
     ],
   },
-  // Add more trips as needed
 ];
 
 const Gallery = () => {
@@ -49,7 +48,7 @@ const Gallery = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

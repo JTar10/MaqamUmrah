@@ -1,4 +1,3 @@
-// ReviewsPage.jsx
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +16,6 @@ const reviewsData = [
 ];
 
 const Review = ({ name, rating, text }) => {
-  // Calculate full and half stars
   const fullStars = Math.floor(rating);
   const halfStars = rating % 1 >= 0.5 ? 1 : 0;
 
@@ -25,11 +23,11 @@ const Review = ({ name, rating, text }) => {
     <div className="bg-white rounded-lg shadow-md p-4 mb-4">
       <h3 className="text-lg font-bold mb-2 text-center">{name}</h3>
       <div className="flex justify-center items-center mb-2">
-        {/* Full stars */}
+        {}
         {Array.from({ length: fullStars }, (_, i) => (
           <FontAwesomeIcon key={`full-${i}`} icon={faStar} className="text-yellow-500 mr-1" />
         ))}
-        {/* Half stars */}
+        {}
         {halfStars === 1 && (
           <FontAwesomeIcon icon={faStarHalfAlt} className="text-yellow-500 mr-1" />
         )}
@@ -59,7 +57,7 @@ const ReviewsPage = () => {
             pairIndex < visiblePairs ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
           }`}
         >
-          {/* Render the two reviews in this pair */}
+          {}
           <Review {...reviewsData[pairIndex * 2]} />
           {reviewsData[pairIndex * 2 + 1] && <Review {...reviewsData[pairIndex * 2 + 1]} />}
         </div>

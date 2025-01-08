@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo.jpg"; // Adjust path if needed
+import logo from "../assets/logo.jpg";
 
 const LandingPage = () => {
   const images = [
@@ -11,13 +11,12 @@ const LandingPage = () => {
   ];
 
   const [visibleImages, setVisibleImages] = useState(Array(images.length).fill(false));
-  const [showContent, setShowContent] = useState(false); // For logo and button
+  const [showContent, setShowContent] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     const timeouts = [];
 
-    // Animate images one by one
     images.forEach((_, index) => {
       timeouts.push(
         setTimeout(() => {
@@ -26,19 +25,17 @@ const LandingPage = () => {
             updated[index] = true;
             return updated;
           });
-        }, index * 750) // Each image fades in one after the other
+        }, index * 750)
       );
     });
 
-    // Show content slightly earlier after the last image fades in
-    const totalAnimationTime = images.length * 800; // Adjusted for earlier appearance
+    const totalAnimationTime = images.length * 800;
     timeouts.push(
       setTimeout(() => {
         setShowContent(true);
       }, totalAnimationTime)
     );
 
-    // Cleanup on unmount
     return () => {
       timeouts.forEach((timeout) => clearTimeout(timeout));
     };
@@ -46,8 +43,8 @@ const LandingPage = () => {
 
   return (
     <div
-      className="relative grid grid-rows-2 grid-cols-2 gap-0 h-[calc(100vh-100px)]" // Adjust for navbar height
-      style={{ height: "calc(100vh - 100px)", overflowY: "hidden", }} // Matches Tailwind class for fallback
+      className="relative grid grid-rows-2 grid-cols-2 gap-0 h-[calc(100vh-100px)]" 
+      style={{ height: "calc(100vh - 100px)", overflowY: "hidden", }} 
     >
       {images.map((image, index) => (
         <div
@@ -59,7 +56,7 @@ const LandingPage = () => {
         ></div>
       ))}
 
-      {/* Centered logo and content */}
+      {}
       {showContent && (
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
           <div
@@ -68,7 +65,7 @@ const LandingPage = () => {
               animationDuration: "1s",
             }}
           >
-            {/* Circular Logo */}
+            {}
             <img
               src={logo}
               alt="Maqam Umrah Logo"
@@ -79,7 +76,7 @@ const LandingPage = () => {
             </p>
             <button
               className="bg-gold text-black px-6 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:border hover:border-black transition duration-300"
-              onClick={() => navigate("/packages")} // Navigate to packages page
+              onClick={() => navigate("/packages")} 
             >
               Explore Packages
             </button>

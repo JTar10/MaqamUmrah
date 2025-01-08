@@ -1,33 +1,32 @@
 import React, { useEffect, useState } from "react";
 
 const ContactUs = () => {
-  const [isVisible, setIsVisible] = useState(false); // Start hidden
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Add a slight delay before setting the content to visible
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 300); // Adjust the delay for smoother handling
+    }, 300); 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="container mx-auto p-4">
-      {/* Page Header */}
+      {}
       <div className="text-center mb-8">
         <h1 className="pt-4 text-3xl font-bold">Contact Us</h1>
       </div>
 
-      {/* Main Content */}
+      {}
       <div
         className={`transition-opacity transition-transform duration-1000 ${
           isVisible
-            ? "opacity-100 translate-y-0" // Visible state
-            : "opacity-0 translate-y-6"   // Hidden state
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-6"   
         }`}
       >
         <div className="flex flex-col md:flex-row items-start">
-          {/* Left Section: Contact Information */}
+          {}
           <div className="md:w-1/2 mb-8 md:mb-0">
             <p className="mb-4">
               If you have any questions about your Umrah trip, don't hesitate to reach out to us!
@@ -48,7 +47,7 @@ const ContactUs = () => {
             </ul>
           </div>
 
-          {/* Right Section: Google Maps Embed */}
+          {}
           <div className="md:w-1/2 mt-8 md:mt-0">
             <h2 className="text-2xl font-semibold mb-4">Our Location</h2>
             <div className="rounded-lg overflow-hidden shadow-lg">

@@ -1,11 +1,10 @@
-// PackagesPage.jsx
 import React from 'react';
 
 const packages = [
   {
     id: 1,
     title: 'Inter-MSA Umrah February 2025',
-    image: '/images/kabah.jpg', // Replace with actual image path
+    image: '/images/kabah.jpg',
     details: [
       'This Umrah trip will be led by our very own Sheikh Abdirahman Hussein, Co-Founder of Maqam Umrah',
       'Price: $3,249 for students, $3,349 for non-students',
@@ -26,10 +25,10 @@ const PackageCard = ({ title, image, details, registrationLink, animationDelay }
     className={`bg-white rounded-lg shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-4 animate-fadeAndMove`}
     style={{ animationDelay: `${animationDelay}s` }}
   >
-    {/* Photo Section */}
+    {}
     <img src={image} alt={title} className="w-full h-64 object-cover md:h-auto" />
 
-    {/* Details Section */}
+    {}
     <div className="p-4 flex flex-col justify-between">
       <div>
         <h2 className="text-2xl font-bold mb-4">{title}</h2>
@@ -62,7 +61,7 @@ const Packages = () => (
         <PackageCard
           key={pkg.id}
           {...pkg}
-          animationDelay={index * 0.3} // Adds delay for each card
+          animationDelay={index * 0.3}
         />
       ))}
     </div>

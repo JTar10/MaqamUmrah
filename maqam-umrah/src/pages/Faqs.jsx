@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Faqs = () => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   const faqs = [
     { question: "What is Umrah?", answer: "Umrah is a pilgrimage to Mecca, Saudi Arabia, performed by Muslims that can be undertaken at any time of the year, unlike Hajj, which has specific dates." },
@@ -17,7 +17,7 @@ const Faqs = () => {
     { question: "How does the process of payment work?", answer: "If you wish to pay for it completely at once (this includes a non-refundable $1000 deposit), you are welcome to do that, but if you choose to pay in installments, then you would pay the $1000 non-refundable deposit first then $500 (or whatever remains) each month." },
   ];
 
-  const [visibleFAQs, setVisibleFAQs] = useState(Array(faqs.length + 1).fill(false)); // Includes the extra section
+  const [visibleFAQs, setVisibleFAQs] = useState(Array(faqs.length + 1).fill(false));
 
   useEffect(() => {
     const timeouts = [];
@@ -30,14 +30,14 @@ const Faqs = () => {
             updated[index] = true;
             return updated;
           });
-        }, index * 250) // Adjusting the delay
+        }, index * 250)
       );
     });
 
     return () => {
       timeouts.forEach((timeout) => clearTimeout(timeout));
     };
-  }, []); // Ensure this runs only once on component mount
+  }, []);
 
   return (
     <div className="container mx-auto p-4">

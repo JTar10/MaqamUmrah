@@ -32,7 +32,7 @@ const AboutUs = () => {
             updated[index] = true;
             return updated;
           });
-        }, index * 500) // Each member fades in one after the other
+        }, index * 500)
       );
     });
 
@@ -57,7 +57,7 @@ const AboutUs = () => {
                 : "opacity-0 -translate-y-4"
             }`}
           >
-            {/* Image with Golden Frame */}
+            {}
             <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
               <img
                 src={member.image}
@@ -67,7 +67,7 @@ const AboutUs = () => {
               />
             </div>
 
-            {/* Text Section */}
+            {}
             <div className="text-left">
               <h2 className="text-xl font-semibold mb-2">{member.name}</h2>
               <p className="text-gray-700">{member.profile}</p>
