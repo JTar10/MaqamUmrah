@@ -3,15 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 
 const reviewsData = [
-  { name: "Rashid A.", rating: 4.5, text: "Amazing service and attention to detail!" },
-  { name: "Muhammad S.", rating: 5, text: "Truly a memorable experience, highly recommend!" },
+  { name: "Brother 1.", rating: 4.5, text: "Amazing service and attention to detail!" },
+  { name: "Brother 2.", rating: 5, text: "Truly a memorable experience, highly recommend!" },
   { name: "Sister 1.", rating: 4, text: "Great organization and smooth trip arrangements." },
-  { name: "Aiden K.", rating: 5, text: "Top-notch service from start to finish!" },
+  { name: "Brother 3.", rating: 5, text: "Top-notch service from start to finish!" },
   { name: "Sister 2.", rating: 5, text: "Exceeded my expectations, thank you so much!" },
   { name: "Sister 3.", rating: 3.5, text: "Good overall, but some minor delays." },
-  { name: "Tarek J.", rating: 4, text: "Wonderful journey, would book again!" },
+  { name: "Brother 4.", rating: 4, text: "Wonderful journey, would book again!" },
   { name: "Sister 4.", rating: 5, text: "Exceeded my expectations, thank you so much!" },
-  { name: "Maaz G.", rating: 4.5, text: "Professional team, everything went perfectly." },
+  { name: "Brother 5.", rating: 4.5, text: "Professional team, everything went perfectly." },
   { name: "Sister 5.", rating: 3.5, text: "Good overall, but some minor delays." },
 ];
 

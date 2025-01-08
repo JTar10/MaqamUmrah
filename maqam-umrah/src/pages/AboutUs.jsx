@@ -9,12 +9,12 @@ const AboutUs = () => {
     },
     {
       name: "Br. Siad",
-      profile: "Whenever I visit Medina, there is this one mandi spot I need to eat at twice before I am satisfied. You will only know the secret mandi spot after you register for umrah with us! btw I also co-found Maqam Umrah.",
+      profile: "Brother Siad is also one of the co-founders of Maqam Umrah. He enjoys his travel opportunities to Medina and Makkah and makes the most effort in making every umrah first experience an unforgettable one.",
       image: "/images/siad.png",
     },
     {
       name: "Sr. Mariam",
-      profile: "I am an Ottawa resident and a member of the Maqam Umrah team! I'm happy to serve on this umrah team and help out!",
+      profile: "Sister Mariam is a Toronto resident and a member of the Maqam Umrah team. She is happy to serve on the Maqam Umrah team and help out as much as possible to facilitate the umrah experience.",
       image: "/images/mariam.png",
     },
   ];
